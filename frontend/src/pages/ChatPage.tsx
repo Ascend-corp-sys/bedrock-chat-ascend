@@ -567,6 +567,7 @@ const ChatPage: React.FC = () => {
               className="flex h-full flex-col overflow-auto pb-16">
               {messages?.length === 0 ? (
                 <div className="relative mb-[45vh]  flex w-full flex-col items-center justify-center">
+                  {/* モデル選択UIを非表示
                   {!loadingConversation && (
                     <SwitchBedrockModel
                       className="mb-6 mt-3 w-min"
@@ -574,6 +575,7 @@ const ChatPage: React.FC = () => {
                       botId={botId}
                     />
                   )}
+                  */}
                   <div className="px-20 text-center">
                     <div className="text-lg font-bold">
                       {isLoadingBot && botId && (

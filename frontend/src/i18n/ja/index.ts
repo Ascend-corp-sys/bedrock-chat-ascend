@@ -9,7 +9,7 @@ const translation: typeof en = {
       },
     },
     app: {
-      name: 'Ascend FAQ Chat',
+      name: 'FAQ Chat',
       inputMessage: 'お手伝いできることはありますか？',
       myBots: 'マイボット',
       discoverBots: 'ボットを探す',
