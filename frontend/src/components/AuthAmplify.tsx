@@ -37,7 +37,7 @@ const AuthAmplify: React.FC<Props> = ({ socialProviders, children }) => {
           ),
         }}>
         <>{cloneElement(children as ReactElement, { signOut })}</>
-      </>
+      </Authenticator>
     </>
   );
 };

@@ -19,15 +19,16 @@ import {
 } from 'react-icons/pi';
 import Button from '../components/Button';
 import { useTranslation } from 'react-i18next';
-import SwitchBedrockModel from '../components/SwitchBedrockModel';
+// import SwitchBedrockModel from '../components/SwitchBedrockModel';
 import useSnackbar from '../hooks/useSnackbar';
 import useBot from '../hooks/useBot';
 import useConversation from '../hooks/useConversation';
-import { ActiveModels, BotSummary } from '../@types/bot';
+import { BotSummary } from '../@types/bot';
+// import { ActiveModels, BotSummary } from '../@types/bot';
 import IconPinnedBot from '../components/IconPinnedBot.tsx';
 
 import { copyBotUrl, isPinnedBot, canBePinned } from '../utils/BotUtils';
-import { toCamelCase } from '../utils/StringUtils';
+// import { toCamelCase } from '../utils/StringUtils';
 import { produce } from 'immer';
 import StatusSyncBot from '../components/StatusSyncBot';
 import Alert from '../components/Alert';
@@ -41,10 +42,10 @@ import { BottomHelper } from '../features/helper/components/BottomHelper';
 import { useIsWindows } from '../hooks/useIsWindows';
 import {
   DisplayMessageContent,
-  Model,
+  // Model,
   PutFeedbackRequest,
 } from '../@types/conversation.ts';
-import { AVAILABLE_MODEL_KEYS } from '../constants/index';
+// import { AVAILABLE_MODEL_KEYS } from '../constants/index';
 import usePostMessageStreaming from '../hooks/usePostMessageStreaming.ts';
 import useLoginUser from '../hooks/useLoginUser';
 import useBotPinning from '../hooks/useBotPinning';
@@ -54,11 +55,11 @@ import ButtonStar from '../components/ButtonStar.tsx';
 import MenuBot from '../components/MenuBot.tsx';
 
 // Default model activation settings when no bot is selected
-const defaultActiveModels: ActiveModels = (() => {
-  return Object.fromEntries(
-    AVAILABLE_MODEL_KEYS.map((key: Model) => [toCamelCase(key), true])
-  ) as ActiveModels;
-})();
+// const defaultActiveModels: ActiveModels = (() => {
+//   return Object.fromEntries(
+//     AVAILABLE_MODEL_KEYS.map((key: Model) => [toCamelCase(key), true])
+//   ) as ActiveModels;
+// })();
 
 const ChatPage: React.FC = () => {
   const { t } = useTranslation();
@@ -83,7 +84,7 @@ const ChatPage: React.FC = () => {
     regenerate,
     continueGenerate,
     getPostedModel,
-    loadingConversation,
+    // loadingConversation,
     getShouldContinue,
     relatedDocuments,
     giveFeedback,
@@ -439,14 +440,14 @@ const ChatPage: React.FC = () => {
     );
   });
 
-  const activeModels = useMemo(() => {
-    if (!bot) {
-      return defaultActiveModels;
-    }
-    const isActiveModelsEmpty =
-      Object.keys(bot?.activeModels ?? {}).length === 0;
-    return isActiveModelsEmpty ? defaultActiveModels : bot.activeModels;
-  }, [bot]);
+  // const activeModels = useMemo(() => {
+  //   if (!bot) {
+  //     return defaultActiveModels;
+  //   }
+  //   const isActiveModelsEmpty =
+  //     Object.keys(bot?.activeModels ?? {}).length === 0;
+  //   return isActiveModelsEmpty ? defaultActiveModels : bot.activeModels;
+  // }, [bot]);
 
   const togglePinBot = useCallback(
     (bot: BotSummary) => {
