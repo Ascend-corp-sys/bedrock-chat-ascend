@@ -30,7 +30,7 @@ const LLAMA_SUPPORTED_MEDIA_TYPES = [
   'image/webp',
 ];
 
-const DEFAULT_MODEL: Model = 'claude-v3.7-sonnet';
+const DEFAULT_MODEL: Model = 'claude-v4.5-sonnet';
 
 const useModelState = create<{
   modelId: Model;

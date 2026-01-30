@@ -78,7 +78,7 @@
     "enableBotStore": false,
     "enableBotStoreReplicas": false,
     "botStoreLanguage": "en",
-    "globalAvailableModels": ["claude-v4.5-sonnet", "gpt-oss-120b"],
+    "globalAvailableModels": ["claude-v4.5-sonnet"],
     "tokenValidMinutes": 30,
     "alternateDomainName": "",
     "hostedZoneId": "",

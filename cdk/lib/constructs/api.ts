@@ -85,15 +85,6 @@ export class Api extends Construct {
     );
     handlerRole.addToPolicy(
       new iam.PolicyStatement({
-        actions: [
-          "aws-marketplace:ViewSubscriptions",
-          "aws-marketplace:Subscribe"
-        ],
-        resources: ["*"],
-      })
-    );
-    handlerRole.addToPolicy(
-      new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
         actions: ["codebuild:StartBuild"],
         resources: [
