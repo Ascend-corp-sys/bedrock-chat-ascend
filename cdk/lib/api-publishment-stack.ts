@@ -67,6 +67,15 @@ export class ApiPublishmentStack extends Stack {
         resources: ["*"],
       })
     );
+    handlerRole.addToPolicy(
+      new iam.PolicyStatement({
+        actions: [
+          "aws-marketplace:ViewSubscriptions",
+          "aws-marketplace:Subscribe"
+        ],
+        resources: ["*"],
+      })
+    );
     const largeMessageBucket = s3.Bucket.fromBucketName(
       this,
       "LargeMessageBucket",

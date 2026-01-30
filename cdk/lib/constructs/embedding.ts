@@ -66,6 +66,15 @@ export class Embedding extends Construct {
     handlerRole.addToPolicy(
       new iam.PolicyStatement({
         actions: [
+          "aws-marketplace:ViewSubscriptions",
+          "aws-marketplace:Subscribe"
+        ],
+        resources: ["*"],
+      })
+    );
+    handlerRole.addToPolicy(
+      new iam.PolicyStatement({
+        actions: [
           "cloudformation:DescribeStacks",
           "cloudformation:DescribeStackEvents",
           "cloudformation:DescribeStackResource",
